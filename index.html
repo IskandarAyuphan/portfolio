@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <title>Iskandar Ayuphan | Portfolio</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -19,8 +19,8 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="education">Education</a></li>
-        <li><a href="experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -28,76 +28,53 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
+  <!-- Sections -->
+  <section id="home" class="hero light">
     <h1>Hi, I am <span>Iskandar Zulkarnain Bin Ayuphan!</span></h1>
     <p>Statistics Graduate | Aspiring Data Analyst</p>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
+  <section id="about" class="hero dark">
     <h2>About Me</h2>
-    <p>
-      I am a passionate data analyst with experience in Python, R, Power BI and
-      statistical modeling. I enjoy transforming data into insights that support
-      better decision-making.
-    </p>
+    <p>I am a passionate data analyst with experience in Python, R, Power BI and statistical modeling. I enjoy transforming data into insights that support better decision-making.</p>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="section light">
-  <h2>Education</h2>
+  <section id="education" class="hero light">
+    <h2>Education</h2>
+    <p>Universiti Kebangsaan Malaysia (UKM)</p>
+    <p>Bachelor of Science with Honours (Statistics)</p>
+    <p>2021 - 2025</p>
+  </section>
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>Bachelor of Science with Honours (Statistics)</h3>
-      <span>Universiti Kebangsaan Malaysia (UKM)</span>
-      <p>2021 – 2025</p>
-    </div>
-  </div>
-</section>
+  <section id="experience" class="hero dark">
+    <h2>Work Experience</h2>
+    <p>Malaysia Digital Economy Corporation (MDEC)</p>
+    <p>Procurement Intern</p>
+    <p>Analyzed procurement records, built dashboard visualizations, and developed automated workflows to improve efficiency and visibility.</p>
+  </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section">
-  <h2>Work Experience</h2>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>Procurement Intern</h3>
-      <span>Malaysia Digital Economy Corporation (MDEC)</span>
-      <p>Analyzed procurement records, built dashboard visualizations, and developed automated workflows to improve efficiency and visibility.</p>
-    </div>
-    
-</section>
-  
-  <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="projects" class="hero light">
     <h2>Projects</h2>
     <div class="projects-grid">
-
       <div class="project-card">
         <h3>Energy Intensity Forecasting</h3>
         <p>Forecasted Malaysia’s energy intensity using ETS & ARIMA models.</p>
         <a href="#" target="_blank">View Project</a>
       </div>
-
       <div class="project-card">
         <h3>Power BI Sales Dashboard</h3>
         <p>Interactive dashboard with KPIs and trend analysis.</p>
         <a href="#" target="_blank">View Project</a>
       </div>
-
       <div class="project-card">
         <h3>BMI Factors Analysis</h3>
         <p>Statistical analysis to identify key factors affecting BMI.</p>
         <a href="#" target="_blank">View Project</a>
       </div>
-
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section light">
+  <section id="skills" class="hero dark">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill-card">Python</div>
@@ -109,8 +86,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section light">
+  <section id="contact" class="hero light">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:iskandarayup@gmail.com">iskandarayup@gmail.com</a></p>
     <p>LinkedIn: <a href="#">linkedin.com/in/iskandar-zulkarnain-ayuphan</a></p>
@@ -125,4 +101,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
