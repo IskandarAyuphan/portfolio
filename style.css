@@ -91,7 +91,7 @@ header {
 }
 
 .section:nth-child(even) {
-  background: linear-gradient(to right, #808080, #333333, #000000); /* Grey → Dark Grey → Black */
+  background: linear-gradient(to right, #343639, #262629, #19181a); /* Black gradient */
 }
 
 /* Headings */
