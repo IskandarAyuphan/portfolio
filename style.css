@@ -24,7 +24,7 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: center; /* Center navbar items */
+  justify-content: center;
   align-items: center;
   padding: 15px 40px;
 }
@@ -45,32 +45,32 @@ header {
   color: #00bcd4;
 }
 
-/* Sections (including Hero) */
-.section, .hero {
-  height: 100vh; /* Full screen height */
+/* Hero Sections (all full-screen) */
+.hero {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertical centering */
-  align-items: center;     /* Horizontal centering */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
   transition: opacity 0.8s, transform 0.8s;
   opacity: 0;
   transform: translateY(20px);
-  padding: 0 15%; /* Optional side padding */
+  padding: 0 15%;
 }
 
-/* Alternate Section Backgrounds */
-.section:nth-child(odd) {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Blue */
+/* Alternating gradients */
+.hero.light {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
-.section:nth-child(even) {
-  background: linear-gradient(to right, #343639, #262629, #19181a); /* Dark */
+.hero.dark {
+  background: linear-gradient(to right, #343639, #262629, #19181a);
 }
 
 /* Headings */
-.section h2, .hero h1 {
+.hero h1 span, .hero h2 {
   margin-bottom: 20px;
 }
 
