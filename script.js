@@ -1,8 +1,18 @@
-const sections = document.querySelectorAll(".section");
+// Smooth scrolling
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
 
-window.addEventListener("scroll", () => {
+// Scroll-triggered fade-in animation
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
   const trigger = window.innerHeight * 0.85;
-
   sections.forEach(section => {
     const top = section.getBoundingClientRect().top;
     if (top < trigger) {
@@ -11,3 +21,4 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
