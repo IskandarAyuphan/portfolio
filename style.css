@@ -23,7 +23,7 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 15px 40px;
 }
@@ -37,7 +37,8 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  justify-content: center;
 }
 
 .nav-links a {
