@@ -1,156 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iskandar's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollReveal/4.0.9/scrollreveal.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iskandar Zulkarnain Bin Ayuphan | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">Portfolio</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section dark">
+  <img src="https://github.com/IskandarAyuphan.png" alt="Profile" class="profile-pic">
+  <img src="https://github.com/IskandarAyuphan.png" class="profile-pic">
+  <h1 class="name">
+    Hi, I am <span>Iskandar Zulkarnain Bin Ayuphan!</span>
+  </h1>
+  <p class="subtitle">Statistics graduate | Aspiring data analyst</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section darker hidden">
+  <h2>About Me</h2>
+  <h2 class="section-title">About Me</h2>
+  <p class="content-text">
+    Aspiring Data Analyst with a background in Statistics, experienced in statistical analysis and data visualization,
+    committed to transforming complex datasets into actionable insights and supporting data-driven decision-making
+    to create meaningful impact and solve organizational challenges.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section dark hidden">
+  <h2>Education</h2>
+  <h2 class="section-title">Education</h2>
+
+  <div class="card">
+  <div class="card dark-card">
+    <strong>Universiti Kebangsaan Malaysia (UKM)</strong><br>
+    Bachelor of Science with Honours (Statistics)<br>
+    Oct 2021 – Aug 2025<br>
+    CGPA: 3.88 (First-class Honours)
+  </div>
+
+  <div class="card">
+  <div class="card dark-card">
+    <strong>Universiti Teknologi MARA (UiTM)</strong><br>
+    Foundation in Science<br>
+    Aug 2020 – Jun 2021<br>
+    CGPA: 4.00 (First-class Honours)
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section darker hidden">
+  <h2>Experience</h2>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="card">
+    <strong>Malaysia Digital Economy Corporation (MDEC)</strong><br>
+    Procurement Intern<br>
+    Mar 2025 – Aug 2025<br><br>
+    Analyzed procurement records, built dashboard visualizations,
+    and automated workflows to enhance visibility and efficiency.
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section dark hidden">
+  <h2>Projects</h2>
+  <h2 class="section-title">Projects</h2>
+
+  <div class="carousel">
+    <div class="arrow" onclick="move(-1)">&#10094;</div>
+
+    <div class="projects-container">
+      <div class="projects-track" id="track">
+
+        <div class="card project">
+          <strong>Psychological Aspects & BMI</strong><br>
+          <small>Analyzed bidirectional relationship between psychological aspects and BMI</small>
+        <div class="card project dark-card">
+          <strong>Relationship between Psychological Aspects and BMI</strong>
+          <p class="project-desc">
+            Analyzed the bidirectional relationship between psychological aspects and BMI
+          </p>
         </div>
-    </header>
 
-    <!-- HOME -->
-    <section id="home" class="section home-section">
-        <img src="https://github.com/IskandarAyuphan.png" alt="Profile Picture" class="profile-pic">
-        <h1>Hi, I am <span class="highlight animate-pulse">Iskandar Zulkarnain Bin Ayuphan!</span></h1>
-        <p class="subtitle">Statistics graduate | Aspiring data analyst</p>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section alt-bg">
-        <h2 class="section-title">About Me</h2>
-        <p class="center-text">Aspiring Data Analyst with a background in Statistics, experienced in statistical analysis and data visualization, committed to transforming complex datasets into actionable insights and supporting data-driven decision-making to create meaningful impact and solve organizational challenges.</p>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section main-bg">
-        <h2 class="section-title">Education</h2>
-        <div class="center-text education-text">
-            <p>
-                Universiti Kebangsaan Malaysia (UKM)<br>
-                Bachelor of Science with Honours (Statistics)<br>
-                Oct 2021 – Aug 2025<br>
-                CGPA: 3.88 (First-class Honours)
-            </p>
-            <p>
-                Universiti Teknologi MARA (UiTM)<br>
-                Foundation in Science<br>
-                Aug 2020 – Jun 2021<br>
-                CGPA: 4.00 (First-class Honours)
-            </p>
+        <div class="card project">
+          <strong>Understanding Energy Intensity</strong><br>
+          <small>Analyzed energy intensity and key drivers</small>
+        <div class="card project dark-card">
+          <strong>Understanding Energy Intensity</strong>
+          <p class="project-desc">
+            Analyzed energy intensity and key drivers (renewable energy, industrial value added)
+          </p>
         </div>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section alt-bg">
-        <h2 class="section-title">Experience</h2>
-        <div class="center-text experience-text">
-            <p>
-                Malaysia Digital Economy Corporation (MDEC)<br>
-                Procurement Intern<br>
-                Mar 2025 – Aug 2025<br>
-                Analyzed procurement records, built dashboard visualizations, and automated workflows to enhance visibility and efficiency.
-            </p>
+        <div class="card project">
+          <strong>Life Expectancy at Birth</strong><br>
+          <small>Built ML models for Malaysia, Indonesia, and Singapore</small>
+        <div class="card project dark-card">
+          <strong>Analysis of Life Expectancy at Birth</strong>
+          <p class="project-desc">
+            Built machine learning models to predict life expectancy at birth
+          </p>
         </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section main-bg">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-carousel">
-            <div class="arrow left" id="prevProj">&#10094;</div>
-            <div class="project-cards">
-
-                <div class="project-box">
-                    <h3>Relationship between Psychological Aspects and BMI</h3>
-                    <p class="project-desc">Analyzed the bidirectional relationship between psychological aspects (depression, anxiety, and stress) and BMI.</p>
-                </div>
-
-                <div class="project-box">
-                    <h3>Understanding Energy Intensity</h3>
-                    <p class="project-desc">Analyzed energy intensity and key drivers (renewable energy, industrial value added).</p>
-                </div>
-
-                <div class="project-box">
-                    <h3>Analysis of Life Expectancy at Birth</h3>
-                    <p class="project-desc">Built machine learning models to predict life expectancy at birth in Malaysia, Indonesia and Singapore.</p>
-                </div>
-
-                <div class="project-box">
-                    <h3>Maternal Mortality Ratio in Asia</h3>
-                    <p class="project-desc">Developed time series models, evaluated their performance, and forecasted the maternal mortality ratio for Malaysia, South Korea, and Afghanistan.</p>
-                </div>
-
-            </div>
-            <div class="arrow right" id="nextProj">&#10095;</div>
+        <div class="card project">
+          <strong>Maternal Mortality Ratio in Asia</strong><br>
+          <small>Forecasted maternal mortality using time series models</small>
+        <div class="card project dark-card">
+          <strong>Maternal Mortality Ratio in Asia</strong>
+          <p class="project-desc">
+            Developed time series models and forecasted maternal mortality ratio
+          </p>
         </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section alt-bg">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-block">
-                <h3>Tools</h3>
-                <div class="skill-box">Canva</div>
-                <div class="skill-box">Microsoft Excel</div>
-                <div class="skill-box">R Programming</div>
-                <div class="skill-box">Minitab</div>
-                <div class="skill-box">Microsoft Power BI</div>
-                <div class="skill-box">Microsoft Power Automate</div>
-                <div class="skill-box">Python</div>
-                <div class="skill-box">SPSS</div>
-                <div class="skill-box">SQL</div>
-                <div class="skill-box">C++</div>
-            </div>
-            <div class="skill-block languages-block">
-                <h3>Languages</h3>
-                <div class="skill-box">Malay<br><span class="lang-level">(Native)</span></div>
-                <div class="skill-box">English<br><span class="lang-level">(Proficient)</span></div>
-                <div class="skill-box">Mandarin<br><span class="lang-level">(Intermediate)</span></div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section main-bg">
-        <h2 class="contact-title animate-pulse-2">Let’s Connect!</h2>
-        <div class="contact-container">
-            <a href="https://github.com/IskandarAyuphan" class="contact-box">Github</a>
-            <a href="https://www.linkedin.com/in/iskandar-zulkarnain-ayuphan/" class="contact-box">LinkedIn</a>
-            <a href="mailto:iskandarayup@gmail.com" class="contact-box">Email</a>
-            <a href="tel:+60174704032" class="contact-box">Phone</a>
-        </div>
-    </section>
+    <div class="arrow" onclick="move(1)">&#10095;</div>
+  </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Iskandar Zulkarnain Bin Ayuphan – All Rights Reserved</p>
-    </footer>
+<!-- SKILLS -->
+<section id="skills" class="section darker hidden">
+  <h2>Skills</h2>
+  <h2 class="section-title">Skills</h2>
 
+  <h3>Tools</h3>
+  <div class="skill-grid">
+    <div class="skill">Canva</div>
+    <div class="skill">Microsoft Excel</div>
+    <div class="skill">R Programming</div>
+    <div class="skill">Minitab</div>
+    <div class="skill">Microsoft Power BI</div>
+    <div class="skill">Microsoft Power Automate</div>
+    <div class="skill">Python</div>
+    <div class="skill">SPSS</div>
+    <div class="skill">SQL</div>
+    <div class="skill">C++</div>
+  </div>
+
+  <h3 class="mt">Languages</h3>
+  <div class="skill-grid">
+    <div class="skill">Malay (Native)</div>
+    <div class="skill">English (Proficient)</div>
+    <div class="skill">Mandarin (Intermediate)</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark hidden">
+  <h2>Let’s Connect!</h2>
+  <h2 class="connect-title">Let’s Connect!</h2>
+
+  <div class="contact-grid">
+    <a class="contact" href="https://github.com/IskandarAyuphan" target="_blank">
+    <a class="contact dark-card" href="https://github.com/IskandarAyuphan" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+
+    <a class="contact" href="https://www.linkedin.com/in/iskandar-zulkarnain-ayuphan/" target="_blank">
+    <a class="contact dark-card" href="https://www.linkedin.com/in/iskandar-zulkarnain-ayuphan/" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a class="contact" href="mailto:iskandarayup@gmail.com">
+    <a class="contact dark-card" href="mailto:iskandarayup@gmail.com">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+
+    <a class="contact" href="tel:+60174704032">
+    <a class="contact dark-card" href="tel:+60174704032">
+      <i class="fas fa-phone"></i> Phone
+    </a>
+  </div>
+</section>
+
+  <footer class="footer">
+  <p>© 2026 Iskandar Zulkarnain Bin Ayuphan. All rights reserved.</p>
+</footer>
+
+<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
