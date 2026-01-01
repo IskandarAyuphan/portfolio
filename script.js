@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll(".reveal");
+const sections = document.querySelectorAll(".section");
 
 window.addEventListener("scroll", () => {
   const trigger = window.innerHeight * 0.85;
