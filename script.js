@@ -1,16 +1,27 @@
-// Scroll animation for all sections except Home
-const sections = document.querySelectorAll(".section");
+/* ================= HAMBURGER MENU ================= */
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
 
-window.addEventListener("scroll", () => {
-  const trigger = window.innerHeight * 0.85;
+/* ================= PROJECT CAROUSEL ================= */
+let index = 0;
 
-  sections.forEach(section => {
-    if(section.id === "home") return; // skip home section
+function move(step) {
+  const track = document.getElementById("track");
+  const maxIndex = 2; // only 2 cards visible at a time
+  index = Math.max(0, Math.min(index + step, maxIndex));
+  track.style.transform = `translateX(${-index * 300}px)`;
+}
 
-    const top = section.getBoundingClientRect().top;
-    if (top < trigger) {
-      section.style.opacity = 1;
-      section.style.transform = "translateY(0)";
+/* ================= SCROLL ANIMATION ================= */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     }
   });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".hidden").forEach(section => {
+  observer.observe(section);
 });
