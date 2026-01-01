@@ -1,25 +1,32 @@
-/* ================= HAMBURGER MENU ================= */
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
-}
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-/* ================= PROJECT CAROUSEL ================= */
-let index = 0;
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
-function move(step) {
-  const track = document.getElementById("track");
-  const maxIndex = 2; // only 2 cards visible at a time
-  index = Math.max(0, Math.min(index + step, maxIndex));
-  track.style.transform = `translateX(${-index * 300}px)`;
-}
+// Projects carousel (simple left/right)
+const cards = document.querySelector('.project-cards');
+let offset = 0;
 
-/* ================= SCROLL ANIMATION ================= */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.2 });
+document.getElementById('prevProj').addEventListener('click', () => {
+    offset += 300;
+    if (offset > 0) offset = -900; 
+    cards.style.transform = `translateX(${offset}px)`;
+});
 
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+document.getElementById('nextProj').addEventListener('click', () => {
+    offset -= 300;
+    if (offset < -900) offset = 0;
+    cards.style.transform = `translateX(${offset}px)`;
+});
+
+// Scroll reveal
+ScrollReveal().reveal('.section', {
+    distance: '50px',
+    duration: 800,
+    delay: 200,
+    reset: false,
+    origin: 'bottom'
+});
