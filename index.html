@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iskandar Ayuphan | Portfolio</title>
+  <title>My Portfolio</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header>
     <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -25,79 +26,67 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
-  <!-- Sections -->
-  <section id="home" class="hero light">
-    <h1>Hi, I am <span>Iskandar Zulkarnain Bin Ayuphan!</span></h1>
-    <p>Statistics Graduate | Aspiring Data Analyst</p>
+  <!-- SECTIONS -->
+  <section id="home" class="hero gradient-1 reveal">
+    <h1>Hi, I'm Iskandar</h1>
+    <p>Statistics & Data Analytics Student</p>
   </section>
 
-  <section id="about" class="hero dark">
+  <section id="about" class="hero gradient-2 reveal">
     <h2>About Me</h2>
-    <p>I am a passionate data analyst with experience in Python, R, Power BI and statistical modeling. I enjoy transforming data into insights that support better decision-making.</p>
+    <p>Brief intro about yourself.</p>
   </section>
 
-  <section id="education" class="hero light">
+  <section id="education" class="hero gradient-1 reveal">
     <h2>Education</h2>
-    <p>Universiti Kebangsaan Malaysia (UKM)</p>
-    <p>Bachelor of Science with Honours (Statistics)</p>
-    <p>2021 - 2025</p>
+    <p>Your education details.</p>
   </section>
 
-  <section id="experience" class="hero dark">
-    <h2>Work Experience</h2>
-    <p>Malaysia Digital Economy Corporation (MDEC)</p>
-    <p>Procurement Intern</p>
-    <p>Analyzed procurement records, built dashboard visualizations, and developed automated workflows to improve efficiency and visibility.</p>
+  <section id="experience" class="hero gradient-2 reveal">
+    <h2>Experience</h2>
+    <p>Your work / internship experience.</p>
   </section>
 
-  <section id="projects" class="hero light">
+  <section id="projects" class="hero gradient-1 reveal">
     <h2>Projects</h2>
+
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Energy Intensity Forecasting</h3>
-        <p>Forecasted Malaysia’s energy intensity using ETS & ARIMA models.</p>
-        <a href="#" target="_blank">View Project</a>
+        <h3>Project Title</h3>
+        <p>Short project description.</p>
       </div>
+
       <div class="project-card">
-        <h3>Power BI Sales Dashboard</h3>
-        <p>Interactive dashboard with KPIs and trend analysis.</p>
-        <a href="#" target="_blank">View Project</a>
+        <h3>Project Title</h3>
+        <p>Short project description.</p>
       </div>
+
       <div class="project-card">
-        <h3>BMI Factors Analysis</h3>
-        <p>Statistical analysis to identify key factors affecting BMI.</p>
-        <a href="#" target="_blank">View Project</a>
+        <h3>Project Title</h3>
+        <p>Short project description.</p>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="hero dark">
+  <section id="skills" class="hero gradient-2 reveal">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">Python</div>
-      <div class="skill-card">R</div>
-      <div class="skill-card">SQL</div>
-      <div class="skill-card">Power BI</div>
-      <div class="skill-card">Statistics</div>
-      <div class="skill-card">Time Series</div>
-    </div>
+    <p>Python • R • Power BI • SQL</p>
   </section>
 
-  <section id="contact" class="hero light">
+  <section id="contact" class="hero gradient-1 reveal">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:iskandarayup@gmail.com">iskandarayup@gmail.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/iskandar-zulkarnain-ayuphan</a></p>
-    <p>GitHub: <a href="#">github.com/IskandarAyuphan</a></p>
+    <p>Email | LinkedIn | GitHub</p>
   </section>
 
-  <footer>
-    <p>© 2026 Iskandar Zulkarnain Bin Ayuphan</p>
-  </footer>
-
-  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
