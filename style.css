@@ -206,6 +206,15 @@ h3 {
   margin-right: 8px;
 }
 
+/* ================= FOOTER ================= */
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
 /* ================= SCROLL ANIMATION ================= */
 .hidden {
   opacity: 0;
