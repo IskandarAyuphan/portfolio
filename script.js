@@ -22,7 +22,4 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
-document.querySelectorAll(".hidden").forEach(section => {
-  observer.observe(section);
-});
 document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
