@@ -67,12 +67,12 @@ header {
   background: linear-gradient(to right, #343639, #262629, #19181a);
 }
 
-/* Hero */
-.hero h1 span {
+/* Section gradient-1 */
+.section gradient-1 h1 span {
   color: #00bcd4;
 }
 
-.hero p {
+.section gradient-1 p {
   margin: 15px 0;
   font-size: 1.1rem;
 }
