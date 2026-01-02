@@ -5,21 +5,22 @@ function toggleMenu() {
 
 /* ================= PROJECT CAROUSEL ================= */
 let index = 0;
+const totalProjects = 4;   // total number of project cards
+const visibleProjects = 2; // number of cards visible at a time
+const cardWidth = 300;     // must match your CSS
 
 function move(step) {
   const track = document.getElementById("track");
-  const maxIndex = 2; // only 2 cards visible at a time
-  index = Math.max(0, Math.min(index + step, maxIndex));
-  track.style.transform = `translateX(${-index * 300}px)`;
+  const maxIndex = totalProjects - visibleProjects; // last index where 2 cards are fully visible
+
+  index += step;
+
+  // wrap around
+  if (index > maxIndex) {
+    index = 0; // back to first set
+  } else if (index < 0) {
+    index = maxIndex; // go to last set
+  }
+
+  track.style.transform = `translateX(${-index * cardWidth}px)`;
 }
-
-/* ================= SCROLL ANIMATION ================= */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.2 });
-
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
