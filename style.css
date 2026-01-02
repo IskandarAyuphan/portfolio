@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 /* ================= NAVBAR ================= */
@@ -15,7 +16,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -54,17 +55,17 @@ header {
   cursor: pointer;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
     position: absolute;
     top: 70px;
     right: 0;
-    background: #111;
     width: 100%;
+    background: #111;
     flex-direction: column;
     align-items: center;
+    display: none;
     padding: 20px 0;
   }
 
@@ -83,8 +84,8 @@ header {
   padding: 100px 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -104,12 +105,21 @@ header {
   text-underline-offset: 12px;
 }
 
+h3 {
+  margin: 20px 0;
+}
+
+.mt {
+  margin-top: 40px;
+}
+
 /* ================= HOME ================= */
 .profile-pic {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   border: 5px solid #3a6184;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -118,87 +128,126 @@ header {
   animation: pulse 1.5s infinite;
 }
 
+.subtitle {
+  margin-top: 10px;
+}
+
 @keyframes pulse {
   0% { opacity: 1; }
   50% { opacity: 0.6; }
   100% { opacity: 1; }
 }
 
+/* ================= CONTENT ================= */
+.content-text {
+  max-width: 800px;
+}
+
+
 /* ================= CARDS ================= */
 .card {
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
   padding: 20px;
+  border-radius: 15px;
   margin: 10px;
   max-width: 600px;
 }
 
-.dark-card {
-  background: #2c2d31;
-}
-
-/* PROJECT DESCRIPTION SPACING */
-.project-desc {
-  margin-top: 12px;
-  font-size: 14px;
-}
-
 /* ================= PROJECTS ================= */
+/* Carousel Container */
 .carousel {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
+/* Projects Container */
 .projects-container {
   width: 600px;
   overflow: hidden;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
+/* Track */
 .projects-track {
   display: flex;
   transition: transform 0.5s ease;
 }
 
+/* Project Card */
 .project {
   min-width: 280px;
+  margin: 10px;
+  scroll-snap-align: start;
 }
 
+.project strong {
+  display: block;
+  margin-bottom: 8px; /* space between title & description */
+}
+
+.project small {
+  display: block;
+  line-height: 1.4;
+}
+
+/* Arrows */
 .arrow {
   font-size: 30px;
   cursor: pointer;
+}
+
+/* Mobile: 1 card visible */
+@media (max-width: 500px) {
+  .project {
+    flex: 0 0 90%; /* 1 card per view */
+  }
 }
 
 /* ================= SKILLS ================= */
 .skill-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
   justify-content: center;
+  gap: 15px;
 }
 
 .skill {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   padding: 10px 20px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.mt {
-  margin-top: 40px;
+.skill-name {
+  font-weight: 600;
+}
+
+.skill-level {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 2px;
 }
 
 /* ================= CONTACT ================= */
 .contact-grid {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 .contact {
-  text-decoration: none;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
   padding: 15px 25px;
   border-radius: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .contact i {
@@ -226,16 +275,4 @@ header {
   padding: 20px;
   font-size: 14px;
   color: #bbb;
-}
-
-/* ================= SCROLL ANIMATION ================= */
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
 }
