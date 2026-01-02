@@ -20,7 +20,7 @@
 <header>
   <nav class="navbar">
     <div class="logo">Portfolio</div>
-
+    
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -39,7 +39,7 @@
 
 <!-- HOME -->
 <section id="home" class="section dark">
-  <img src="https://github.com/IskandarAyuphan.png" class="profile-pic">
+  <img src="https://github.com/IskandarAyuphan.png" alt="Profile" class="profile-pic">
   <h1 class="name">
     Hi, I am <span>Iskandar Zulkarnain Bin Ayuphan!</span>
   </h1>
@@ -60,14 +60,14 @@
 <section id="education" class="section dark hidden">
   <h2 class="section-title">Education</h2>
 
-  <div class="card dark-card">
+  <div class="card">
     <strong>Universiti Kebangsaan Malaysia (UKM)</strong><br>
     Bachelor of Science with Honours (Statistics)<br>
     Oct 2021 – Aug 2025<br>
     CGPA: 3.88 (First-class Honours)
   </div>
 
-  <div class="card dark-card">
+  <div class="card">
     <strong>Universiti Teknologi MARA (UiTM)</strong><br>
     Foundation in Science<br>
     Aug 2020 – Jun 2021<br>
@@ -98,32 +98,24 @@
     <div class="projects-container">
       <div class="projects-track" id="track">
 
-        <div class="card project dark-card">
-          <strong>Relationship between Psychological Aspects and BMI</strong>
-          <p class="project-desc">
-            Analyzed the bidirectional relationship between psychological aspects and BMI
-          </p>
+        <div class="card project">
+          <strong>Psychological Aspects & BMI</strong>
+          <small>Analyzed bidirectional relationship between psychological aspects and BMI</small>
         </div>
 
-        <div class="card project dark-card">
+        <div class="card project">
           <strong>Understanding Energy Intensity</strong>
-          <p class="project-desc">
-            Analyzed energy intensity and key drivers (renewable energy, industrial value added)
-          </p>
+          <small>Analyzed energy intensity and key drivers</small>
         </div>
 
-        <div class="card project dark-card">
-          <strong>Analysis of Life Expectancy at Birth</strong>
-          <p class="project-desc">
-            Built machine learning models to predict life expectancy at birth
-          </p>
+        <div class="card project">
+          <strong>Life Expectancy at Birth</strong>
+          <small>Built ML models for Malaysia, Indonesia, and Singapore</small>
         </div>
 
-        <div class="card project dark-card">
+        <div class="card project">
           <strong>Maternal Mortality Ratio in Asia</strong>
-          <p class="project-desc">
-            Developed time series models and forecasted maternal mortality ratio
-          </p>
+          <small>Forecasted maternal mortality using time series models</small>
         </div>
 
       </div>
@@ -151,12 +143,23 @@
     <div class="skill">C++</div>
   </div>
 
-  <h3 class="mt">Languages</h3>
-  <div class="skill-grid">
-    <div class="skill">Malay (Native)</div>
-    <div class="skill">English (Proficient)</div>
-    <div class="skill">Mandarin (Intermediate)</div>
+<h3 class="mt">Languages</h3>
+<div class="skill-grid">
+  <div class="skill">
+    <span class="skill-name">Malay</span>
+    <span class="skill-level">(Native)</span>
   </div>
+
+  <div class="skill">
+    <span class="skill-name">English</span>
+    <span class="skill-level">(Proficient)</span>
+  </div>
+
+  <div class="skill">
+    <span class="skill-name">Mandarin</span>
+    <span class="skill-level">(Intermediate)</span>
+  </div>
+</div>
 </section>
 
 <!-- CONTACT -->
@@ -164,16 +167,19 @@
   <h2 class="connect-title">Let’s Connect!</h2>
 
   <div class="contact-grid">
-    <a class="contact dark-card" href="https://github.com/IskandarAyuphan" target="_blank">
+    <a class="contact" href="https://github.com/IskandarAyuphan" target="_blank">
       <i class="fab fa-github"></i> GitHub
     </a>
-    <a class="contact dark-card" href="https://www.linkedin.com/in/iskandar-zulkarnain-ayuphan/" target="_blank">
+
+    <a class="contact" href="https://www.linkedin.com/in/iskandar-zulkarnain-ayuphan/" target="_blank">
       <i class="fab fa-linkedin"></i> LinkedIn
     </a>
-    <a class="contact dark-card" href="mailto:iskandarayup@gmail.com">
+
+    <a class="contact" href="mailto:iskandarayup@gmail.com">
       <i class="fas fa-envelope"></i> Email
     </a>
-    <a class="contact dark-card" href="tel:+60174704032">
+
+    <a class="contact" href="tel:+60174704032">
       <i class="fas fa-phone"></i> Phone
     </a>
   </div>
