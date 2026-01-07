@@ -94,7 +94,7 @@ header {
 }
 
 .darker {
-  background: linear-gradient(to right, #132f38, #0e222a, #0b1c22);
+  background: linear-gradient(to right, #0b1c22, #0e222a, #132f38);
 }
 
 /* SECTION TITLES */
