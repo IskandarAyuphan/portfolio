@@ -255,7 +255,7 @@ h4 {
 }
 
 .project-card a {
-  font-size: 0.8rem
+  font-size: 0.8rem;
   color: #fff;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.15);
