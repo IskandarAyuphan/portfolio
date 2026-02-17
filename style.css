@@ -213,7 +213,7 @@ h4 {
 .project-card {
   background: #2c2d31;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertical centering */
@@ -238,7 +238,7 @@ h4 {
   left: 50%;           /* horizontal center */
   width: 90%; 
   transform: translate(-50%, -50%); /* center in both directions */
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #00bcd4;
   font-weight: 700;
   text-align: center;
@@ -259,7 +259,7 @@ h4 {
   text-decoration: none;
   background: rgba(255, 255, 255, 0.15);
   padding: 5px 12px;
-  border-radius: 6px;
+  border-radius: 15px;
   align-self: center;
   margin-top: auto;
   transition: transform 0.3s, background 0.3s;
