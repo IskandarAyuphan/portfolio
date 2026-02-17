@@ -248,7 +248,7 @@ h4 {
 .project-desc {
   margin-top: 6rem;
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 1.2;
   color: #fff;
   text-align: center; /* aligns all descriptions to center */
   flex-grow: 1; /* makes all cards equal height for descs */
@@ -258,7 +258,7 @@ h4 {
   color: #fff;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.15);
-  padding: 5px 12px;
+  padding: 20px;
   border-radius: 15px;
   align-self: center;
   margin-top: auto;
