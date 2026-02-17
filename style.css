@@ -364,6 +364,11 @@ h4 {
   margin-top: 2px;
 }
 
+.skill-grid a:hover {
+  background: rgba(58, 158, 217, 0.25);
+  transform: scale(1.05);
+}
+
 /* ================= CONTACT ================= */
 .contact-grid {
   display: flex;
